@@ -1,0 +1,72 @@
+.card {
+    border: 1px solid #C4C4C4;
+    border-radius: 40px;
+    max-width: 215px;
+    min-height: 260px;
+    width: 100%;
+    padding: 30px;
+}
+
+.card__desc {
+    font: 400 14px/17px 'Inter';
+    font-style: normal;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.btn-like {
+    width: 32px;
+    height: 32px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-like__icon {
+    width: 16px;
+    height: 16px;
+    background: url('../../../public/img/heart.svg') center/contain no-repeat;
+}
+
+.card__img {
+    width: 133px;
+    height: 112px;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price__text span {
+    display: block;
+}
+
+.price__text span:first-of-type {
+    font: 500 14px 'Inter';
+    color: #BDBDBD;
+}
+
+.price__text span:last-of-type {
+    font: 700 16px 'Inter';
+}
+
+.price__btn {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #BDBDBD;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price__btn-icon {
+    width: 15px;
+    height: 15px;
+    background: url('../../../public/img/plyus.svg') center/contain;
+}
