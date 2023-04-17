@@ -5,6 +5,7 @@
     min-height: 260px;
     width: 100%;
     padding: 30px;
+    transition: box-shadow 0.15s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .card__desc {
@@ -25,11 +26,7 @@
     justify-content: center;
 }
 
-.btn-like__icon {
-    width: 16px;
-    height: 16px;
-    background: url('../../../public/img/heart.svg') center/contain no-repeat;
-}
+.favorite { cursor: pointer }
 
 .card__img {
     width: 133px;
@@ -42,17 +39,12 @@
     align-items: center;
 }
 
-.price__text span {
-    display: block;
-}
+.price__text span { display: block }
+.price__text span:last-of-type { font: 700 16px 'Inter' }
 
 .price__text span:first-of-type {
     font: 500 14px 'Inter';
     color: #BDBDBD;
-}
-
-.price__text span:last-of-type {
-    font: 700 16px 'Inter';
 }
 
 .price__btn {
@@ -63,10 +55,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .price__btn-icon {
     width: 15px;
     height: 15px;
     background: url('../../../public/img/plyus.svg') center/contain;
+}
+
+.card:hover {
+    box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.09);
+    transform: translateY(-5px);
 }

@@ -1,19 +1,20 @@
 import "./Card.css";
 
-export default function Card() {
+export default function Card({ name, price, imgUrl, onClickButton }) {
     return (
         <div className="card">
             <div className="btn-like">
-                <div className="btn-like__icon"></div>
+                <img className="favorite" src="/img/heart.svg" alt="Favorite" />
+                <div className=""></div>
             </div>
-            <img className="card__img" src="/img/card-1.jpg" alt="" />
-            <p className="card__desc">Мужские Кроссовки Nike Blazer Mid Suede</p>
+            <img className="card__img" src={imgUrl} alt="" />
+            <p className="card__desc">{name}</p>
             <div className="price">
                 <div className="price__text">
                     <span>Цена:</span>
-                    <span>12 999 руб.</span>
+                    <span>{price} руб.</span>
                 </div>
-                <div className="price__btn">
+                <div className="price__btn" onClick={onClickButton}>
                     <div className="price__btn-icon"></div>
                 </div>
             </div>

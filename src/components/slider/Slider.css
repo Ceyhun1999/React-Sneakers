@@ -37,7 +37,6 @@
     cursor: pointer;
 }
 
-
 .slider__right {
     background: url("../../../public/img/slider-right.png") center/cover;
     width: 66%;

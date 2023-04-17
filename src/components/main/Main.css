@@ -4,6 +4,7 @@ main h2 { font: 700 32px/32px 'Inter' }
 .main__top {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 20px;
 }
 
 .search { position: relative }
@@ -28,4 +29,10 @@ main h2 { font: 700 32px/32px 'Inter' }
 .search__input::placeholder {
     font: 400 14px/17px 'Inter';
     color: #C4C4C4;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }

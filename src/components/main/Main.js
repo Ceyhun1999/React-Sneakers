@@ -1,8 +1,9 @@
+import { sneakers } from "../../data/Data";
 import Card from "../card/Card";
 import Slider from "../slider/Slider";
 import "./Main.css";
 
-export default function Main() {
+export default function Main({ onClickButton }) {
     return (
         <main>
             <Slider />
@@ -16,7 +17,15 @@ export default function Main() {
                 </div>
                 <div className="main__bottom">
                     <div className="cards">
-                        <Card />
+                        {sneakers.map((item, idx) => (
+                            <Card
+                                onClickButton={onClickButton}
+                                key={idx}
+                                name={item.name}
+                                price={item.price}
+                                imgUrl={item.imgUrl}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>
