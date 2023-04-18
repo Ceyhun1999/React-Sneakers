@@ -3,7 +3,7 @@ import Card from "../card/Card";
 import Slider from "../slider/Slider";
 import "./Main.css";
 
-export default function Main({ onClickButton }) {
+export default function Main({ onClickFavorite, onClickAdd }) {
     return (
         <main>
             <Slider />
@@ -19,7 +19,8 @@ export default function Main({ onClickButton }) {
                     <div className="cards">
                         {sneakers.map((item, idx) => (
                             <Card
-                                onClickButton={onClickButton}
+                                onClickAdd={onClickAdd}
+                                onClickFavorite={onClickFavorite}
                                 key={idx}
                                 name={item.name}
                                 price={item.price}

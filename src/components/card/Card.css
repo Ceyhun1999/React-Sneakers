@@ -58,12 +58,6 @@
     cursor: pointer;
 }
 
-.price__btn-icon {
-    width: 15px;
-    height: 15px;
-    background: url('../../../public/img/plyus.svg') center/contain;
-}
-
 .card:hover {
     box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.09);
     transform: translateY(-5px);

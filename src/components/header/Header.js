@@ -1,6 +1,6 @@
 import "./Header.css";
 
-export default function Header() {
+export default function Header({ handleShow }) {
     return (
         <header>
             <div className="container">
@@ -12,7 +12,7 @@ export default function Header() {
                     </div>
                 </div>
                 <div className="header__right">
-                    <div>
+                    <div className="btn__shop" onClick={handleShow}>
                         <img src="/img/shop.svg" alt="Shop" />
                         <span>1205 руб.</span>
                     </div>

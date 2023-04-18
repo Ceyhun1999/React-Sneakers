@@ -1,9 +1,13 @@
+import { useState } from "react";
 import "./Card.css";
 
-export default function Card({ name, price, imgUrl, onClickButton }) {
+export default function Card({ name, price, imgUrl, onClickFavorite }) {
+    const [isAdded, setIsAdded] = useState(false);
+    const onClickAdd = () => setIsAdded(!isAdded);
+
     return (
         <div className="card">
-            <div className="btn-like">
+            <div onClick={onClickFavorite} className="btn-like">
                 <img className="favorite" src="/img/heart.svg" alt="Favorite" />
                 <div className=""></div>
             </div>
@@ -14,8 +18,8 @@ export default function Card({ name, price, imgUrl, onClickButton }) {
                     <span>Цена:</span>
                     <span>{price} руб.</span>
                 </div>
-                <div className="price__btn" onClick={onClickButton}>
-                    <div className="price__btn-icon"></div>
+                <div className="price__btn" onClick={onClickAdd}>
+                    <img src={!isAdded ? "/img/plyus.svg" : "/img/added.svg"} alt="" />
                 </div>
             </div>
         </div>

@@ -40,3 +40,13 @@ header .container {
     font-family: 600 14px/17px 'Inter';
     color: #5C5C5C;
 }
+
+.btn__shop {
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+
+}
+
+.btn__shop:hover {
+    transform: translateY(-5px);
+}
